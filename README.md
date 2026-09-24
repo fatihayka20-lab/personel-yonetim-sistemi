@@ -9,4 +9,4 @@ npm install
 npm run dev -- --host 0.0.0.0
 ```
 
-İlk sürümde dashboard, personel arama, MYK/SRC/psikoteknik belge uyarıları ve yeni personel kartı formu bulunur.
+Bu sürümde personel kartı ekleme, tarayıcıda kalıcı kayıt, personel detay ekranı ve MYK/SRC/Psikoteknik belge tarih uyarıları bulunur.
