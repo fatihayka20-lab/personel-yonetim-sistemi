@@ -1,12 +1,11 @@
 # Personel360
 
-Çok şirketli personel, belge, depo, zimmet ve araç-filo yönetim sistemi.
+AyKa Enerji personel kartı örneğine göre sekmeli personel yönetim prototipi.
 
-## Çalıştırma
+- Kişisel & İletişim
+- Eğitim & Kariyer
+- Beden & KKD
+- Sertifika & Belgeler
+- Tahsisli Araç
 
-```bash
-npm install
-npm run dev -- --host 0.0.0.0
-```
-
-Bu sürümde personel kartı ekleme, tarayıcıda kalıcı kayıt, personel detay ekranı ve MYK/SRC/Psikoteknik belge tarih uyarıları bulunur.
+MYK, SRC, psikoteknik ve ehliyet son geçerlilik tarihleri otomatik olarak izlenir. Kayıtlar şimdilik tarayıcı localStorage alanında tutulur.
