@@ -518,11 +518,17 @@ header {
   padding: 14px;
 }
 .detail-grid small { display: block; color: var(--muted); margin-bottom: 4px; }
+.detail-section {
+  margin-top: 18px;
+}
+.detail-section h4 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
 .doc-detail-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 14px;
 }
 .doc-detail-item {
   display: flex;
@@ -531,6 +537,24 @@ header {
   padding: 10px 12px;
   border: 1px solid var(--line-soft);
   border-radius: 8px;
+}
+.vehicle-box {
+  border: 1px solid var(--line-soft);
+  background: #f8fafb;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.vehicle-box strong {
+  font-size: 18px;
+}
+.vehicle-box span {
+  color: var(--muted);
+}
+.detail-actions {
+  justify-content: space-between;
 }
 
 @media (max-width: 980px) {
@@ -548,3 +572,264 @@ header {
   .toolbar-row, .page-heading { flex-direction: column; align-items: stretch; }
   .search-box { max-width: none; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
