@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Bell, Building2, FileCheck2, LayoutDashboard, Package, Truck, UserRound, Users } from 'lucide-react'
 import { InventoryModule } from './InventoryModule'
+import { OperationsModule } from './OperationsModule'
 import { VehicleModule } from './VehicleModule'
 import './styles.css'
 
@@ -19,6 +20,7 @@ const navItems = [
   ['Şirketler', Building2],
   ['Belgeler', FileCheck2],
   ['Depolar', Package],
+  ['Yakıt & Bakım', Truck],
   ['Araç Filosu', Truck],
 ]
 const nameOf = (person) => `${person.firstName} ${person.lastName}`
@@ -46,6 +48,7 @@ function App() {
         {active === 'Şirketler' && <CompaniesPage companies={companies} people={people} />}
         {active === 'Belgeler' && <Placeholder title="Belge Takibi" text="Personel belgeleri bu modülde yönetilecek." />}
         {active === 'Depolar' && <InventoryModule />}
+        {active === 'Yakıt & Bakım' && <OperationsModule />}
         {active === 'Araç Filosu' && <VehicleModule />}
       </section>
     </main>
@@ -53,7 +56,7 @@ function App() {
 }
 
 function Dashboard({ people, setActive }) {
-  return <div className="page-stack"><div className="page-heading"><div><small className="eyebrow">GENEL BAKIŞ</small><h1>Gösterge Paneli</h1></div></div><div className="card-grid"><Stat title="Toplam Personel" value={people.length} icon={Users} tone="teal" /><Stat title="Aktif Personel" value={people.filter((person) => person.status === 'Aktif').length} icon={UserRound} tone="green" /><Stat title="Depo Modülü" value="Hazır" icon={Package} tone="blue" /><Stat title="Araç Modülü" value="Hazır" icon={Truck} tone="amber" /></div><div className="content-grid"><div className="panel"><h3>Modüller</h3><div className="stack-list"><button className="mini-button" onClick={() => setActive('Depolar')}><Package size={16} /> Depo ve Envanteri Aç</button><button className="mini-button" onClick={() => setActive('Araç Filosu')}><Truck size={16} /> Araç Filosunu Aç</button></div></div></div></div>
+  return <div className="page-stack"><div className="page-heading"><div><small className="eyebrow">GENEL BAKIŞ</small><h1>Gösterge Paneli</h1></div></div><div className="card-grid"><Stat title="Toplam Personel" value={people.length} icon={Users} tone="teal" /><Stat title="Aktif Personel" value={people.filter((person) => person.status === 'Aktif').length} icon={UserRound} tone="green" /><Stat title="Depo Modülü" value="Hazır" icon={Package} tone="blue" /><Stat title="Yakıt & Bakım" value="Hazır" icon={Truck} tone="amber" /></div><div className="content-grid"><div className="panel"><h3>Modüller</h3><div className="stack-list"><button className="mini-button" onClick={() => setActive('Depolar')}><Package size={16} /> Depo ve Envanteri Aç</button><button className="mini-button" onClick={() => setActive('Yakıt & Bakım')}><Truck size={16} /> Yakıt ve Bakımı Aç</button><button className="mini-button" onClick={() => setActive('Araç Filosu')}><Truck size={16} /> Araç Filosunu Aç</button></div></div></div></div>
 }
 
 function Stat({ title, value, icon: Icon, tone }) { return <div className="stat-card"><div className={`icon-box ${tone}`}><Icon size={18} /></div><div><small>{title}</small><strong>{value}</strong></div></div> }
